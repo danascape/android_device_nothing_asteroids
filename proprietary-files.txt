@@ -767,9 +767,9 @@ vendor/lib64/libqll10.so
 vendor/lib64/libqllengine.so
 vendor/lib64/libqsegnet.so
 vendor/lib64/libqshcamera.so
-vendor/lib64/librender_lib.so
+vendor/lib64/librender_lib.so|6b07fde39b8931ea642b91f6822d3f82bab0e00b
 vendor/lib64/libsfeShiftExtrapolation.so
-vendor/lib64/libstmobile_effect.so
+vendor/lib64/libstmobile_effect.so|bb4976d17c4fe2b916b9718546eb2c2172c6389a
 vendor/lib64/libswregistrationalgo.so
 vendor/lib64/libsynx.so
 vendor/lib64/libtfestriping.so
@@ -1066,7 +1066,7 @@ system_ext/lib64/lib-imsvideocodec.so
 system_ext/lib64/lib-imsvt.so
 system_ext/lib64/lib-imsvtextutils.so
 system_ext/lib64/lib-imsvtutils.so
-system_ext/lib64/libimscamera_jni.so;SYMLINK=system_ext/priv-app/ims/lib/arm64/libimscamera_jni.so
+system_ext/lib64/libimscamera_jni.so;SYMLINK=system_ext/priv-app/ims/lib/arm64/libimscamera_jni.so|ae7b9dc964cb0d3939e09d91af096b207c978830
 system_ext/lib64/libimsmedia_jni.so;SYMLINK=system_ext/priv-app/ims/lib/arm64/libimsmedia_jni.so
 system_ext/lib64/vendor.qti.ImsRtpService-V1-ndk.so
 system_ext/lib64/vendor.qti.ImsRtpService-V2-ndk.so
@@ -1384,7 +1384,7 @@ product/framework/uimremoteclientlibrary.jar
 product/framework/uimremoteserverlibrary.jar
 product/framework/uimservicelibrary.jar
 system/framework/nt-telephony-interface.jar
-system_ext/app/QtiTelephonyService/QtiTelephonyService.apk
+system_ext/app/QtiTelephonyService/QtiTelephonyService.apk|e0d0f759b23c1cbbb26f03436b8e6093d3bb67a0
 system_ext/etc/permissions/qcrilhook.xml
 system_ext/etc/permissions/qti_libpermissions.xml
 system_ext/etc/permissions/qti_permissions.xml
@@ -1583,13 +1583,13 @@ vendor/etc/init/vendor.noth.hardware.sensor.sensor_extension-service.rc
 vendor/etc/init/vendor.sensors.qti.rc
 vendor/etc/init/vendor.sensors.sscrpcd.rc
 vendor/etc/sensors/config/json.lst
-vendor/etc/sensors/config/milos_qsh_ble_0.json
-vendor/etc/sensors/config/qrd_hx32062secr_0.json
-vendor/etc/sensors/config/qrd_icm536xx_0.json
-vendor/etc/sensors/config/qrd_lsm6dsv_0.json
-vendor/etc/sensors/config/qrd_ltr567_0.json
-vendor/etc/sensors/config/qrd_mmc56x3x_0.json
-vendor/etc/sensors/config/qrd_och191x_0.json
+vendor/etc/sensors/config/milos_qsh_ble_0.json|2c4a507c5090427025958dc0aeee23079d4ed0f4
+vendor/etc/sensors/config/qrd_hx32062secr_0.json|9d135d41cf1ed857fc7f8a6b8e7c2b5c9cc3da64
+vendor/etc/sensors/config/qrd_icm536xx_0.json|25494b01a48a609458666f61848171f9da863393
+vendor/etc/sensors/config/qrd_lsm6dsv_0.json|155b0460d4a4a11056957ca0f13a673d3ea87e48
+vendor/etc/sensors/config/qrd_ltr567_0.json|8420e7a230f054ebffbbdacf2d5c95f68386cf76
+vendor/etc/sensors/config/qrd_mmc56x3x_0.json|b5eb7208657940a88f176e2fa375700c05cc8348
+vendor/etc/sensors/config/qrd_och191x_0.json|bff307356a097bac8b0b8af9fd8f7a060d8c6bcd
 vendor/etc/sensors/config/qrd_ois_manager.json
 vendor/etc/sensors/config/qsh_ble.json
 vendor/etc/sensors/config/sns_amd.json
@@ -1696,8 +1696,8 @@ vendor/firmware/focaltech_ts_fw_vxn.bin
 vendor/firmware/focaltech_ts_fw_vxn.bin:recovery/root/vendor/firmware/focaltech_ts_fw_vxn.bin
 
 # TrustedUI
-vendor/bin/trusteduilistener
-vendor/etc/init/trusteduilistener.rc
+vendor/bin/trusteduilistener|c09c2a44c065875ca9fa01e0eddb930d69df73d3
+vendor/etc/init/trusteduilistener.rc|1c350bd3272c728c2c28352d52d61f1ca43c2917
 vendor/lib64/libTrustedInputUtils.so
 
 # Verizon - from komodo BP2A.250805.005
@@ -1749,7 +1749,7 @@ system_ext/lib64/libwfduibcsinkinterface.so
 system_ext/lib64/libwfduibcsrc.so
 system_ext/lib64/libwfduibcsrcinterface.so
 system_ext/lib64/vendor.qti.hardware.wifidisplaysession@1.0.so
-system_ext/lib64/vendor.qti.hardware.wifidisplaysession_aidl-V1-ndk.so
+system_ext/lib64/vendor.qti.hardware.wifidisplaysession_aidl-V1-ndk.so|862439ea491b4b88c812bcc6b240076e309c0f9b
 system_ext/priv-app/WfdService/WfdService.apk
 
 # WFD
