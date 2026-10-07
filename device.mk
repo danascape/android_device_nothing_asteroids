@@ -113,7 +113,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.biometrics.fingerprint-service.nothing
 
-$(call soong_config_set_bool,nothing_fingerprint,use_lhbm,true)
+$(call soong_config_set,NOTHING_BIOMETRICS_FINGERPRINT,IMPL_VER,V2)
+$(call soong_config_set_bool,NOTHING_BIOMETRICS_FINGERPRINT,USE_LHBM,true)
+$(call soong_config_set,NOTHING_BIOMETRICS_FINGERPRINT,UDFPS_HANDLER,asteroids)
+PRODUCT_PACKAGES += libudfpshandler.asteroids
 
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.fingerprint.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.fingerprint.xml
@@ -154,10 +157,6 @@ PRODUCT_PACKAGES += \
     IPACM_cfg.xml \
     ipacm
 
-# Device Extras
-PRODUCT_PACKAGES += \
-    DeviceExtras
-
 # Display
 $(call soong_config_set,surfaceflinger,frame_rate_category_high,120)
 
@@ -184,6 +183,7 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.telephony.euicc.xml:$(TARGET_COPY_OUT_ODM)/etc/permissions/sku_ProTUR/android.hardware.telephony.euicc.xml
 
 PRODUCT_PACKAGES += \
+    NothingEuicc \
     EuiccPolicy \
     NothingEsimSwitcher \
     default-permissions-com.google.android.euicc.xml \
@@ -322,7 +322,6 @@ PRODUCT_ENFORCE_RRO_TARGETS := *
 PRODUCT_PACKAGES += \
     AsteroidsApertureDevOverlay \
     AsteroidsApertureOverlay \
-    AsteroidsEuiccOverlay \
     AsteroidsFrameworksOverlay \
     AsteroidsMainlineWifiOverlay \
     AsteroidsProMainlineWifiOverlay \
@@ -434,9 +433,9 @@ PRODUCT_PACKAGES += \
 # Soong
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH) \
-    kernel/nothing/sm7635 \
-    packages/apps/ParanoidGlyph \
-    packages/apps/GlyphAdapter
+    hardware/nothing \
+    hardware/nothing2 \
+    kernel/nothing/sm7635
 
 # Storage
 PRODUCT_CHARACTERISTICS := nosdcard
