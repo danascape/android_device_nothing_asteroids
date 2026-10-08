@@ -67,12 +67,15 @@ blob_fixups: blob_fixups_user_type = {
         .add_needed('libaudiobase.so')
         .add_needed('libgui_shim.so'),
     'system_ext/lib64/vendor.qti.hardware.qccsyshal@1.2-halimpl.so': blob_fixup()
-        .replace_needed('libprotobuf-cpp-full.so','libprotobuf-cpp-full-21.7.so'), 
-    'vendor/bin/qcc-vendor': blob_fixup()
-        .add_needed('libbinder_shim.so'),
-    'vendor/bin/qms': blob_fixup()
-        .add_needed('libbinder_shim.so'),
-    'vendor/bin/xtra-daemon': blob_fixup()
+        .replace_needed('libprotobuf-cpp-full.so','libprotobuf-cpp-full-21.7.so'),
+    (
+        'vendor/lib64/libqms_client.so',
+        'vendor/bin/qcc-vendor',
+        'vendor/bin/xtra-daemon',
+        'vendor/bin/qms',
+        'vendor/lib64/libcne.so',
+        'vendor/lib64/libqcc_sdk.so',
+    ): blob_fixup()
         .add_needed('libbinder_shim.so'),
     'vendor/etc/lvacfs_params/1mic/LVACFS_Configuration.txt': blob_fixup()
         .patch_file('audio/lvacfs_1mic_config.patch'),
@@ -84,8 +87,6 @@ blob_fixups: blob_fixups_user_type = {
         .clear_symbol_version('remote_register_buf')
         .clear_symbol_version('rpcmem_alloc')
         .clear_symbol_version('rpcmem_free'),
-    'vendor/lib64/libcne.so': blob_fixup()
-        .add_needed('libbinder_shim.so'),
     'vendor/lib64/libmorpho_RapidEffect.so': blob_fixup()
         .clear_symbol_version('AHardwareBuffer_allocate')
         .clear_symbol_version('AHardwareBuffer_describe')
@@ -99,8 +100,6 @@ blob_fixups: blob_fixups_user_type = {
     'vendor/lib64/vendor.libdpmframework.so': blob_fixup()
         .add_needed('libbinder_shim.so')
         .add_needed('libhidlbase_shim.so'),
-    'vendor/lib64/libqcc_sdk.so': blob_fixup()
-        .add_needed('libbinder_shim.so'),
     'vendor/lib64/libqcodec2_core.so': blob_fixup()
         .add_needed('libcodec2_shim.so'),
     'vendor/lib64/libperfgluelayer.so': blob_fixup()
