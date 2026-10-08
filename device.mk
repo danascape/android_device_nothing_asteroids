@@ -228,6 +228,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     android.hardware.hardware_keystore_V3.xml
 
+# Lights
+PRODUCT_PACKAGES += \
+    android.hardware.light-service.nothing
+
 # Lineage Health
 $(call soong_config_set,lineage_health,charging_control_charging_path,/proc/charger/usb_charger_en)
 
