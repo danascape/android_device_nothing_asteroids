@@ -170,9 +170,11 @@ PRODUCT_PACKAGES += \
     fastbootd
 
 # Glyph
+$(call soong_config_set,nothing_glyph,device,phone3)
+
 PRODUCT_PACKAGES += \
-    GlyphAdapter \
-    ParanoidGlyphPhone3a
+    ParanoidGlyph \
+    ParanoidGlyphPhone3aProRes
 
 # GPS
 PRODUCT_COPY_FILES += \
